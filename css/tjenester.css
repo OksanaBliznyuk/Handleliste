@@ -1,0 +1,519 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: white;
+
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: rgb(22, 44, 59);
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  width: 60px;
+  height: 60px;
+}
+
+img {
+  background: 100%;
+  position: relative;
+}
+.logo-title {
+  color: rgb(10, 10, 10);
+  position: relative;
+  top: 40%;
+  left: 22%;
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 800;
+}
+
+h2 {
+  color: rgb(22, 44, 59);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  transition: 0.7s ease;
+}
+h2:hover {
+  color: rgb(168, 90, 59);
+}
+
+h3 {
+  color: rgb(206, 207, 207);
+  font-family: cursive;
+  font-size: 25px;
+  font-weight: 100;
+  padding-top: 5%;
+}
+
+a:hover {
+  color: rgb(168, 90, 59);
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(22, 44, 59);
+}
+
+main {
+  background-color: rgb(33, 46, 46);
+  width: 100%;
+  height: auto;
+}
+
+.cards {
+  background-color: rgb(121, 129, 129);
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50% 50%;
+  grid-gap: 0;
+  padding: 0;
+}
+
+.card-image {
+  background-size: 280px 350px;
+}
+
+.card-1 {
+  background-color: rgb(22, 44, 59);
+  width: 50vw;
+  height: 50vh;
+}
+
+.card-image {
+  background: 100%;
+  height: auto;
+}
+
+.card-2 {
+  background-image: url(..//images/bilde-7.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 50vh;
+  width: 50vw;
+  height: 50vh;
+}
+
+.card-3 {
+  background-image: url(..//images/detergents.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 50vh;
+  width: 50vw;
+  height: 50vh;
+}
+
+.card-4 {
+  background-color: rgb(206, 207, 207);
+  width: 50vw;
+  height: 50vh;
+}
+
+.card-content {
+  padding: 10% 20%;
+}
+
+.card-text {
+  position: relative;
+  text-align: center;
+  padding: 10% 10%;
+}
+
+/*Strip the ul of padding and list styling*/
+.card-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.item {
+  position: relative;
+  text-align: left;
+}
+
+.content {
+  display: inline-block;
+  margin-right: 1px;
+  margin-top: 5px;
+}
+
+/*Style for menu links*/
+.content a {
+  display: block;
+  min-width: 340px;
+  height: auto;
+  text-align: justify;
+  line-height: 30px;
+  padding: 0 10px;
+  font-family: cursive;
+  color: rgb(168, 90, 59);
+  background: rgb(191, 201, 203);
+  text-decoration: none;
+}
+
+/*Hide dropdown links untill they are needed*/
+.hidden {
+  display: none;
+}
+
+.item .card-menu .content {
+  display: block;
+  float: none;
+}
+
+.item .card-menu .content a {
+  width: auto;
+  min-width: 100px;
+  padding: 0 15px;
+}
+
+/*Display the dropdown on hover*/
+
+ul li a:hover + .hidden,
+.hidden:hover {
+  display: block;
+}
+
+/*hide checkbox*/
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ #menu {
+  display: block;
+}
+
+.show-menu {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+
+h1 {
+  color: rgb(168, 90, 59);
+  font-family: cursive;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+h4 {
+  color: rgb(206, 207, 207);
+  padding-top: 8%;
+  font-size: 16px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+p {
+  color: rgb(22, 44, 59);
+  font-size: large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  padding-top: 5%;
+}
+
+footer {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 65% 35%;
+  grid-gap: 30px;
+  padding: 10%;
+  position: relative;
+  text-align: center;
+}
+.footer-bar {
+  padding-top: 7%;
+}
+
+.footer-menu .nav-link {
+  font-size: 20px;
+  color: rgb(168, 90, 59);
+  flex-direction: column;
+  transition: 0.7s ease;
+}
+
+.footer-menu .nav-link:hover {
+  color: rgb(22, 44, 59);
+}
+footer label {
+  color: rgb(255, 254, 254);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+footer input[type="email"] {
+  border-radius: 5px;
+  border-style: double;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+}
+footer input[type="submit"] {
+  background-color: rgb(216, 150, 126);
+  color: rgb(22, 44, 59);
+  width: 75px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: 0.4s;
+}
+footer input[type="submit"]:hover {
+  background-color: rgb(22, 44, 59);
+  color: white;
+}
+
+.media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 10px;
+}
+.facebook {
+  background-image: url(../images/facebook.png);
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+}
+.facebook:hover {
+  width: 35px;
+  height: 35px;
+  transition: 0.3s;
+}
+.instagram {
+  background-image: url(../images/instagram.png);
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+}
+.instagram:hover {
+  width: 35px;
+  height: 35px;
+  transition: 0.3s;
+}
+.telephone {
+  background-image: url(../images/telefon.png);
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+}
+.telephone:hover {
+  width: 35px;
+  height: 35px;
+  transition: 0.3s;
+}
+
+p {
+  color: rgb(22, 44, 59);
+  font-size: large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  padding-top: 5%;
+}
+
+@media only screen and (max-width: 991px) {
+  .card-2 {
+    background-image: url(..//images/bilde-10.jpg);
+  }
+  footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    position: relative;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: absolute;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .logo-title {
+    color: white;
+  }
+
+  .wrapper {
+    background-image: url(..//images/logo-2.png);
+    background-repeat: no-repeat;
+  }
+
+  main {
+    margin-top: 220px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-content {
+    position: relative;
+    right: 15%;
+  }
+
+  .content a {
+    display: block;
+    min-width: 340px;
+    height: auto;
+    padding: 0 10px;
+    font-family: cursive;
+    color: rgb(168, 90, 59);
+    background: rgb(191, 201, 203);
+    text-decoration: none;
+  }
+
+  .card-1 {
+    width: 100vw;
+    height: 40vh;
+  }
+
+  .card-2 {
+    background-image: url(..//images/bilde-10.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 50vh;
+    width: 100vw;
+    height: 40vh;
+  }
+
+  .card-3 {
+    background: none;
+    background-size: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .card-4 {
+    width: 100vw;
+  }
+
+  h1 {
+    color: rgb(168, 90, 59);
+    font-family: cursive;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 100;
+    padding-top: 7%;
+  }
+
+  h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 9px;
+    margin-top: 3%;
+    padding-top: 5%;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 12px;
+    font-weight: 200;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .footer-menu .nav-link {
+    font-size: 17px;
+  }
+}
